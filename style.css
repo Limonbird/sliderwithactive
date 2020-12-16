@@ -1,0 +1,35 @@
+.wrapper {
+  max-width: 600px;
+  height: 300px;
+  overflow: hidden;
+  border: 3px solid black;
+  margin: 0 auto;
+}
+
+.slides {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.slide {
+  list-style: none;
+  min-width: 600px;
+  height: 100%;
+  display: none;
+  font-size: 72px;
+  line-height: 300px;
+  text-align: center;
+}
+
+.active {
+  display: block;
+  animation: shake 0.7s linear normal;
+}
+
+.button-wrapper {
+  margin: 0 auto;
+  width: 100px;
+}

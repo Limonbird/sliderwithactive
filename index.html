@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <ul class="slides">
+          <li
+            v-for="item in slidesList"
+            :key="item.id"
+            class="slide"
+            :class="{active: counter === item.num }"
+            :style="{ backgroundColor: item.bgc }"
+          >
+            {{ item.text }}
+          </li>
+        </ul>
+      </div>
+      <div class="button-wrapper">
+        <button @click="prevStep">Prev</button>
+        <button @click="nextStep">Next</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      slidesList: [
+        { id: 0, text: "Slide 1", bgc: "green", num: 1 },
+        { id: 1, text: "Slide 2", bgc: "blue", num: 2 },
+        { id: 2, text: "Slide 3", bgc: "yellow", num: 3 },
+      ],
+      counter: 1,
+    },
+    methods: {
+      nextStep() {
+        if (this.counter <= this.slidesList.length + 1) {
+          this.counter++;
+          if (this.counter === this.slidesList.length + 1) {
+            this.counter = 1;
+          }
+        }
+      },
+      prevStep() {
+        if (this.counter > 0) {
+          this.counter--;
+          if (this.counter === 0) {
+            this.counter = this.slidesList.length;
+          }
+        }
+      },
+    },
+  });
+</script>
