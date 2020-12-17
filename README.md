@@ -6,6 +6,8 @@ https://limonbird.github.io/sliderwithactive/
 
 active всегда по центру
 
+Начинается со 2го слайда
+
 баз анимации
 
 зациклен
@@ -13,3 +15,5 @@ active всегда по центру
 слайды не-active скрыты display:none
 
 у active display: block
+
+
