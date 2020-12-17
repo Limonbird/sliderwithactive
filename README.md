@@ -1,5 +1,7 @@
 # sliderwithactive
 
+https://limonbird.github.io/sliderwithactive/
+
 Слайдер с классом active
 
 active всегда по центру
