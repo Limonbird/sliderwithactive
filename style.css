@@ -21,14 +21,14 @@
   font-size: 72px;
   line-height: 300px;
   text-align: center;
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
   /* transform: translate(0, 0); */
-  /* display: none; */
+  display: none;
 }
 
 .active {
   display: block;
-  transition: all 1s ease-in;
+  /* transition: all 1s ease-in; */
   /* transform: translateX(-100%); */
 }
 
