@@ -40,16 +40,18 @@
         { id: 1, text: "Slide 2", bgc: "blue", num: 2 },
         { id: 2, text: "Slide 3", bgc: "yellow", num: 3 },
       ],
-      counter: 1,
+      counter: 2,
     },
     methods: {
       nextStep() {
-        if (this.counter <= this.slidesList.length + 1) {
+        if (this.counter <= this.slidesList.length) {
           this.counter++;
           if (this.counter === this.slidesList.length + 1) {
             this.counter = 1;
           }
         }
+        let first = this.slidesList.shift();
+        this.slidesList.push(first);
       },
       prevStep() {
         if (this.counter > 0) {
@@ -58,6 +60,8 @@
             this.counter = this.slidesList.length;
           }
         }
+        let last = this.slidesList.pop();
+        this.slidesList.unshift(last);
       },
     },
   });
