@@ -8,6 +8,8 @@ active всегда по центру
 
 баз анимации
 
+зациклен
+
 слайды не-active скрыты display:none
 
-актив display: block
+у active display: block
